@@ -1,16 +1,15 @@
 function getComputerChoice() {
 
+    const randomNumber = Math.random()
 
-    if (getComputerChoice <= .3333) {
-        getComputerChoice = "Rock";
-    } else if (getComputerChoice <= .6667) {
-        getComputerChoice = "Paper";
+    if (randomNumber <= .3333) {
+        return "Rock";
+    } else if (randomNumber <= .6667) {
+        return "Paper";
     } else {
-        getComputerChoice = "Scissors";
+        return "Scissors";
     }   
-
-     
 
 }
 
-console.log(getComputerChoice);
+console.log(getComputerChoice());
