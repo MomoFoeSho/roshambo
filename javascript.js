@@ -14,3 +14,13 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+let userInput = prompt("Choose rock, paper, or scissors");
+
+function getHumanChoice() {
+
+    return userInput;
+
+}
+
+console.log(userInput);
+
