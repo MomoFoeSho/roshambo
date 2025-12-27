@@ -29,8 +29,15 @@ computerScore = 0
 
 function playRound(computerChoice, humanChoice) {
 
-
     
+
+    function humanChoice(str) {
+
+        const firstLetter = str.charAt(0).toUpperCase();
+        const restOfStr = str.slice(1).toLowerCase();
+    }
+    
+    return firstLetter + restOfStr;
 }
 
 const humanSelection = getHumanChoice();
