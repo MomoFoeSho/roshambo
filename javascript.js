@@ -35,10 +35,12 @@ function playRound(computerChoice, humanChoice) {
 
         const firstLetter = str.charAt(0).toUpperCase();
         const restOfStr = str.slice(1).toLowerCase();
+
+        return firstLetter + restOfStr;
+}
     }
     
-    return firstLetter + restOfStr;
-}
+   
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
