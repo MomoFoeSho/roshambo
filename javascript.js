@@ -24,3 +24,16 @@ function getHumanChoice() {
 
 console.log(userInput);
 
+humanScore = 0
+computerScore = 0
+
+function playRound(computerChoice, humanChoice) {
+
+    
+    
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerCHoice();
+
+playRound(humanSelection, computerSelection);
