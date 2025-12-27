@@ -29,11 +29,11 @@ computerScore = 0
 
 function playRound(computerChoice, humanChoice) {
 
-    
+
     
 }
 
 const humanSelection = getHumanChoice();
-const computerSelection = getComputerCHoice();
+const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
