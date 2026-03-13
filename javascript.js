@@ -1,48 +1,63 @@
 function getComputerChoice() {
 
-    const randomNumber = Math.random()
-
-    if (randomNumber <= .3333) {
-        return "Rock";
-    } else if (randomNumber <= .6667) {
-        return "Paper";
-    } else {
-        return "Scissors";
-    }   
-
+    const choices = ["Rock", "Paper", "Scissors"];
+    return choices[Math.floor(Math.random() * 3)];
 }
-
 console.log(getComputerChoice());
 
-let userInput = prompt("Choose rock, paper, or scissors");
+function getHumanChoice(userInput) {
 
-function getHumanChoice() {
+    const firstLetter = userInput.charAt(0).toUpperCase();
+    const restOfStr = userInput.slice(1).toLowerCase();
 
-    return userInput;
+    return firstLetter + restOfStr;
+
+
 
 }
 
-console.log(userInput);
+let humanScore = 0;
+let computerScore = 0;
+let roundsPlayed = 0;
 
-humanScore = 0
-computerScore = 0
 
 function playRound(computerChoice, humanChoice) {
 
-    
 
-    function humanChoice(str) {
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie!")
 
-        const firstLetter = str.charAt(0).toUpperCase();
-        const restOfStr = str.slice(1).toLowerCase();
+    } else if ((humanChoice === 'Rock' && computerChoice === 'Scissors') || (humanChoice === 'Paper' && computerChoice === 'Rock') ||
+        (humanChoice === 'Scissors' && computerChoice === 'Paper')) {
+        humanScore++;
+        console.log("You win!")
+    } else {
+        computerScore++;
+        console.log("You lose!")
 
-        return firstLetter + restOfStr;
-}
     }
-    
-   
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+    roundsPlayed++;
 
-playRound(humanSelection, computerSelection);
+
+}
+
+for (let i = 0; i < 5; i++) {
+
+    let userInput = prompt("Choose Rock, Paper, or Scissors");
+    console.log(userInput);
+    const humanSelection = getHumanChoice(userInput);
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
+
+}
+
+
+console.log("Final score: Player:" + humanScore + " " + "|" + " " + "Computer:" + computerScore)
+
+
+
+
+
+
